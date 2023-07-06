@@ -15,7 +15,7 @@
 }
 .logo{
     width: 100%;
-    height: 320px;
+    height: 280px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -23,12 +23,12 @@
 
 .logo img{
     margin-top: 10px;
-    width: 25em;
+    width: 23em;
 }
 .name_identity{
     display: flex;
     align-items: center;
-    height: 250px;
+    height: 210px;
     background-color: #a7d6ce ;
     flex-direction: column;
     justify-content: space-around;
@@ -45,7 +45,7 @@
 
 }
 
-.name_identity button {
+.buttonPersuasive {
   margin: 0;
   background-color: #245950;
   border: none;
@@ -54,8 +54,9 @@
   border-radius: 10px;
   color: #fff;
   transition: 0.5s ease ;
+  margin: 20px;
 }
-.name_identity button:hover{
+.buttonPersuasive:hover{
     background-color: #948e99;
     cursor: pointer;
 }
@@ -75,9 +76,185 @@
     padding: 50px;
 }
 .pilha h1 {
+    animation: moveTitle 2s ease-in-out infinite alternate;
     font-size: 35px;
 }
 .pilha p{
     letter-spacing: normal;
     font-size: 16px;
 }
+
+.purpose{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    flex-direction: row;
+    text-align: center;
+    background-color: aqua;
+    height: 500px;
+}
+
+
+.myPurpose{
+    width: 100%;
+    background-color: #a7d6ce;
+    padding: 50px;
+}
+
+
+.purpose img{
+    width: 500px;
+}
+
+.about_me{
+    width: 100%;
+  background-color: #c5becc;
+  padding: 50px;
+}
+
+.results{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.texts{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 40%;
+    font-size: 1.1em;
+    line-height: 2;
+}
+
+.organization{
+    display: flex;
+    width: 70%;
+    justify-content: space-between;
+}
+.numbers{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    width: 10rem;
+}
+
+
+.number1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    font-size: 30px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: #4db09e;
+}
+
+.number2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: #e3d6d2;
+}
+
+.number3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: #948e99;
+    font-size: 30px;
+}
+
+.number4{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: #e3d6d2;
+    font-size: 30px;
+}
+
+.number5{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: #4db09e;
+}
+
+.depoimentSection{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    background-color: #f6edff;
+    width: 100%;
+}
+
+.depoimentsImg img {
+    width: 150px;
+    border-radius: 50%;
+    display: flex;
+}
+
+.depoimentsContainer{
+    display: flex;
+    width: 80%;
+    align-items: center;
+    justify-content: center;
+}
+
+.depoiments{
+    display: flex;
+    flex-direction: row;
+    width: 85%;
+    height: 270px;
+    background-color: #d5e1ca;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    margin: 20px;
+}
+.depoimentText{
+    width: 90%;
+    padding: 20px;
+}
+
+.depoimentText h2{
+    color: #a22342;
+    font-size: 20px;
+}
+
+.depoimentText p{
+    color: #888589;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+@keyframes moveTitle {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }

@@ -1,4 +1,6 @@
 import logo from "../../img/logo.svg";
+import Mulher from '../../img/mulherIA.png';
+import JovemEngenheira from '../../img/jovem_engenheira.png';
 import './home.css';
 import {Link} from 'react-router-dom';
 
@@ -12,7 +14,7 @@ function Home(){
                 <div className="name_identity" >
                     <h1>Fábrício Choraes</h1>
                     <p>Coaching e mentoria</p>
-                    <button>
+                    <button className="buttonPersuasive" >
                         Vamos Conversar?
                     </button>
                 </div>
@@ -25,26 +27,126 @@ function Home(){
                     </p>
                     <Link>Saiba Mais</Link>
                 </div>
-                <div className="services pilha " >
+                <div className="services pilha " style={{backgroundColor: "#e3d6d2"}} >
                     <h1>Mentoria de Carreira</h1>
                     <p>
                     Apoia o profissional em busca de desenvolvimento ou na transição da sua carreira, promovendo autoconhecimento, clareza, foco e direcionamento. Através de um planejamento sob medida, metas e objetivos são definidos e validados, como também as principais etapas do caminho. Assim, você será capaz de ampliar a sua perspectiva e assumir o protagonismo da sua carreira, trabalhando também a sua empregabilidade. 
                     </p>
                     <Link>Saiba mais</Link>
                 </div>
-                <div className="services pilha " >
+                <div className="services pilha " style={{backgroundColor: "#948e99"}} >
                     <h1>Coaching Vocacional</h1>
                     <p>
                     Destinado a jovens e adultos, em diferentes momentos da vida, seja na escolha, transição ou reinvenção de carreira, visa ampliar o autoconhecimento e explorar o leque de possibilidades, apoiando a busca de novos caminhos e oportunidades. A partir daí, você terá mais autoconfiança para uma tomada de decisão e para fazer o planejamento da sua carreira, de forma mais consciente e segura, reduzindo riscos e incertezas. 
                     </p>
                     <Link>Saiba mais</Link>
                 </div>
-                <div className='services pilha ' >
+                <div className='services pilha 'style={{backgroundColor: "#e8eff1"}} >
                     <h1>Mentoria de Negócios</h1>
                     <p>
                     Apoia e orienta o empreendedor ou empresário no planejamento e na gestão do seu projeto ou negócio. Um processo de reflexão sobre os objetivos, as estratégias e as competências necessárias para lidar com os desafios e ter sucesso. A partir daí, criamos um planejamento estruturado, estabelecendo prioridades e metas para aproveitar as oportunidades e mitigar as fraquezas, com foco e organização, enquanto  você entra em ação. 
                     </p>
                     <Link>Saiba Mais</Link>
+                </div>
+            </section>
+            <section className="purpose" >
+                <div className='myPurpose' >
+                    <h1>
+                        Meu Propósito
+                    </h1>
+                    <p>
+                        Fazer diferença na vida
+                        das pessoas, apoiando-as em
+                        uma jornada de autoconhecimento,
+                        na potencialização dos seus talentos e
+                        no desenvolvimento de suas habilidades.
+                        Contribuir positivamente para uma
+                        mudança desejada, uma importante
+                        tomada de decisão
+                        ou para a realização de um sonhado projeto, pensando em conjunto os possíveis
+                        caminhos e as etapas necessárias ao sucesso.  
+                        Gerar resultados sustentáveis por meio do aprendizado e da melhoria contínua.
+                        Atuar com excelência e respeito,
+                        aliando conhecimento especializado,
+                        experiência qualificada e ética.
+                    </p>
+                </div>
+                <div>
+                    <img src={Mulher} alt="woman_business" />
+                </div>
+                <div className="about_me" >
+                    <h1>Sobre mim</h1>
+                    <p>
+                    Psicóloga e mestre em Administração, construí minha carreira no mundo corporativo, nas áreas de recursos humanos e marketing. Apaixonada pelo conhecimento e comportamento humano, descobri no coaching uma poderosa metodologia de autodesenvolvimento e transformação, que gera excelentes resultados, comprovados por dezenas de clientes em busca de uma vida equilibrada e uma carreira com propósito e bem-sucedida. 
+                    </p>
+                </div>
+            </section>
+            <section className="results"  >
+                <div className="texts" >
+                    <h1>
+                        Resultados
+                    </h1>
+                    <p>
+                    Os benefícios do coaching e da mentoria são muitos e podem variar em função das necessidades individuais e dos desafios enfrentados no momento, sendo acima de tudo um processo de aprendizagem. Posso destacar como os principais resultados, relatados com maior frequência pelos meus clientes:
+                    </p>
+                </div>
+               <section className="organization" >
+                        <div className="numbers" >
+                            <div className="number1" >
+                                1.
+                            </div>
+                            <p>Autoconhecimento</p>
+                        </div>
+                        <div className="numbers" >
+                            <div className="number2" >
+                                2.
+                            </div>
+                            <p>Clareza e Foco</p>
+                        </div>
+                        <div className="numbers" >
+                            <div className="number3" >
+                                3.
+                            </div>
+                            <p>Planejamento e Ação</p>
+                        </div>
+                        <div className="numbers" >
+                            <div className="number4" >
+                                4.
+                            </div>
+                            <p>Desenvolvimento Pessoal</p>
+                        </div>
+                        <div className="numbers" >
+                            <div className="number5" >
+                                5.
+                            </div>
+                            <p>Autoestima e Autoconfiança</p>
+                        </div>
+               </section>
+               <div>
+                    <button className="buttonPersuasive" >
+                    Vamos conversar?
+                    </button>
+               </div>
+            </section>
+            <section className="depoimentSection" >
+                <h1>Depoimentos</h1>
+                <div className="depoimentsContainer" >
+                    <div className="depoiments" >
+                        <div className="depoimentsImg" >
+                            <img src={JovemEngenheira} alt="engenheira"  />
+                        </div>
+                        <div className="depoimentText" >
+                            <h1>
+                                SIBELY ROUSE
+                            </h1>
+                            <h2>
+                                Engenheira, inglaterra
+                            </h2>
+                            <p>
+                                "O processo de coaching me surpreendeu positivamente. Foi possível desenvolver o autoconhecimento, ter clareza dos meus objetivos e traçar metas. E afirmo que esse resultado só foi possível devido à competência e à paciência da Alexandra durante as sessões. A experiência profissional dela é inspiradora também. Desde o nosso primeiro encontro eu percebi que ela tinha muito para me ensinar e, como sou engenheira, afirmo com dados e fatos que acertei na escolha! A minha maneira de enxergar e lidar com os desafios evoluiu. Mudei de país recentemente e, além de me direcionar profissionalmente, ela me ajudou na adaptação com a cultura e o novo ambiente de trabalho. Muito obrigada, Alexandra!" 
+                            </p>
+                        </div>
+                    </div>  
                 </div>
             </section>
         </div>
