@@ -1,6 +1,8 @@
 import logo from "../../img/logo.svg";
 import Mulher from '../../img/mulherIA.png';
 import JovemEngenheira from '../../img/jovem_engenheira.png';
+import Pessoaum from '../../img/pessoaum.png';
+import Pessoadois from '../../img/pessoadois.png';
 import './home.css';
 import {Link} from 'react-router-dom';
 
@@ -12,7 +14,7 @@ function Home(){
                     <img src={logo} alt="imagem_logo"/>
                 </div>
                 <div className="name_identity" >
-                    <h1>Fábrício Choraes</h1>
+                    <h1>Fabiana Choraes</h1>
                     <p>Coaching e mentoria</p>
                     <button className="buttonPersuasive" >
                         Vamos Conversar?
@@ -140,14 +142,56 @@ function Home(){
                                 SIBELY ROUSE
                             </h1>
                             <h2>
-                                Engenheira, inglaterra
+                                Engenheira, Inglaterra
                             </h2>
                             <p>
                                 "O processo de coaching me surpreendeu positivamente. Foi possível desenvolver o autoconhecimento, ter clareza dos meus objetivos e traçar metas. E afirmo que esse resultado só foi possível devido à competência e à paciência da Alexandra durante as sessões. A experiência profissional dela é inspiradora também. Desde o nosso primeiro encontro eu percebi que ela tinha muito para me ensinar e, como sou engenheira, afirmo com dados e fatos que acertei na escolha! A minha maneira de enxergar e lidar com os desafios evoluiu. Mudei de país recentemente e, além de me direcionar profissionalmente, ela me ajudou na adaptação com a cultura e o novo ambiente de trabalho. Muito obrigada, Alexandra!" 
                             </p>
                         </div>
-                    </div>  
+                    </div>
+                     
                 </div>
+                <div className="depoimentsContainer" >
+                    <div className="depoiments" >
+                        <div className="depoimentsImg" >
+                            <img src={Pessoaum} alt="engenheira"  />
+                        </div>
+                        <div className="depoimentText" >
+                            <h1>
+                                DIEGO COLOMBO
+                            </h1>
+                            <h2>
+                                Engenheiro, Suiça
+                            </h2>
+                            <p>
+                            "A Fabiana é uma profissional excelente. Muito alegre e atenta aos mínimos detalhes que são discutidos. Ela sempre busca algo novo para suportar as sessões com base no que foi conversado. Além disso, possui um grande conhecimento teórico dos assuntos e muitas ferramentas que suportam o processo. O Coaching me ajudou muito na identificação das minhas fortalezas e quais pontos preciso me desenvolver. Porém, o mais importante foi trabalharmos com o propósito e valores e, com base nisso, construir o meu futuro. Descobrir essa fundação é essencial para trilharmos o caminho para o nosso sucesso e felicidade profissional."
+                            </p>
+                        </div>
+                    </div>
+                     
+                </div>
+
+                <div className="depoimentsContainer" >
+                    <div className="depoiments" >
+                        <div className="depoimentsImg" >
+                            <img src={Pessoadois} alt="engenheira"  />
+                        </div>
+                        <div className="depoimentText" >
+                            <h1>
+                                VANESSA LIMA
+                            </h1>
+                            <h2>
+                                Jornalista, Alemanha
+                            </h2>
+                            <p>
+                            "O coaching com a Alexandra foi fundamental para o meu momento de vida. Estava me sentindo perdida, havia dezenas de perguntas e não conseguia chegar às respostas. A principal delas era se eu estava na profissão certa. Tinha três áreas de interesse e, com a orientação da Alexandra, das ferramentas aplicadas e das pesquisas realizadas, eu tive clareza e segurança para escolher a área profissional a seguir. Também me orientou em relação aos próximos passos para a minha recolocação no mercado de trabalho e durante todo o processo Alexandra demonstrou paciência, dedicação, compreensão e seriedade. Estou agradecida por ter escolhido ela para ser minha coach e com os resultados do processo."
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <button className="buttonPersuasive" >
+                        Veja Mais Clientes
+                </button>
             </section>
         </div>
        

@@ -1,0 +1,47 @@
+
+.footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #a7d6ce;
+    }
+
+.footerContainer{
+    width: 70%;
+    margin:20px;
+    display: flex;
+    justify-content: space-evenly;
+}
+.footerInfo{
+    width: 50%;
+}
+
+.contactForm{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: #a7d6ce;
+    height: 300px;
+}
+
+.contactForm input {
+    background-color: #a7d6ce;
+    border: none;
+    border-bottom: 1px solid black;
+}
+
+.contactForm textarea {
+    background-color: #a7d6ce;
+    border: none;
+    border-bottom: 1px solid black;
+    resize: none;
+}
+
+.copyright{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+}
