@@ -1,9 +1,9 @@
+import './home.css';
 import logo from "../../img/logo.svg";
 import Mulher from '../../img/mulherIA.png';
 import JovemEngenheira from '../../img/jovem_engenheira.png';
 import Pessoaum from '../../img/pessoaum.png';
 import Pessoadois from '../../img/pessoadois.png';
-import './home.css';
 import {Link} from 'react-router-dom';
 
 function Home(){
@@ -16,9 +16,9 @@ function Home(){
                 <div className="name_identity" >
                     <h1>Fabiana Choraes</h1>
                     <p>Coaching e mentoria</p>
-                    <button className="buttonPersuasive" >
+                    <Link to='/sobre' ><button className="buttonPersuasive" >
                         Vamos Conversar?
-                    </button>
+                    </button></Link>
                 </div>
             </section>
             <section className="services" >
@@ -189,9 +189,11 @@ function Home(){
                         </div>
                     </div>
                 </div>
-                <button className="buttonPersuasive" >
-                        Veja Mais Clientes
-                </button>
+                <Link to="/depoimentos">
+                    <button className="buttonPersuasive" >
+                            Veja Mais Clientes
+                    </button>
+                </Link>
             </section>
         </div>
        
