@@ -10,12 +10,16 @@ import MentoriaNegocios from './pages/Mentoria-de-Negocios';
 import Depoimentos from './pages/Depoimentos';
 import Header from './Components/Header';
 import Footer from './Components/Footer';
+import WhatsAppButton from './Components/WhatsAppButton';
 
 function RoutesApp(){
+    
     return(
     <BrowserRouter>
 
         <Header/>
+
+        <WhatsAppButton/>
 
         <Routes>
            <Route  path='/' element={<Home/>} />
@@ -28,7 +32,7 @@ function RoutesApp(){
             <Route path="/depoimentos" element={<Depoimentos/>} />
         </Routes>
 
-        <Footer/>
+        <Footer id="footer" />
 
     </BrowserRouter>
     )

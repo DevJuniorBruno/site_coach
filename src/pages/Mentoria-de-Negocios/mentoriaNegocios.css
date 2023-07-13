@@ -1,0 +1,8 @@
+.mentoriaNegocios{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: #d5e1ca;
+    justify-content: center;
+    align-items: center;
+}

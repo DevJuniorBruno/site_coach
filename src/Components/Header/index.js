@@ -1,5 +1,5 @@
 import './header.css'
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 import Home from '../../pages/Home';
 import Sobre from '../../pages/Sobre';
@@ -7,9 +7,30 @@ import MeuProposito from '../../pages/Meu-Propósito';
 import CoachingExecutivo from '../../pages/Coaching-Executivo';
 import MentoriaCarreira from '../../pages/Mentoria-Carreira';
 
-import { useState,useRef } from "react";
+import { useState,useRef, useEffect} from "react";
 
 function Header(){
+
+    const location = useLocation()
+  
+    useEffect(()=>{
+        const handleClickOutside = (event) =>{
+            if(navLinksRef.current && !navLinksRef.current.contains(event.target)) {
+                setIsOpen(false)
+            }
+        };
+
+        document.addEventListener('mousedown', handleClickOutside);
+
+        return() =>{
+            document.removeEventListener('mousedown', handleClickOutside);
+        }
+
+    }, []);
+
+    useEffect(()=>{
+        setIsOpen(false)
+    }, [location]);
 
     const [isOpen, setIsOpen]=useState(false);
     const navLinksRef = useRef(null);
@@ -45,7 +66,10 @@ function Header(){
             onMouseLeave={handleMouseLeave}
             
             >
-                <Link onClick={handleDropDownToggle} >Serviços</Link>
+               
+               <div className="dropdown-toggle" onClick={handleDropDownToggle} >
+                    Serviços
+               </div>
                 {isDropdownOpen &&(
                     <div className='dropdown-menu' onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}  >
                         <li>
@@ -64,7 +88,9 @@ function Header(){
                 )}
                 </Link>
             <Link to="/depoimentos" >Depoimentos</Link>
-            <Link to="/contato" >Contato</Link>
+            <Link to="/" onClick={() => (window.location.hash = 'footer')}>
+                Contato
+            </Link>
           </div>
 
             <div className={`nav_toggle ${isOpen && 'open'}`}

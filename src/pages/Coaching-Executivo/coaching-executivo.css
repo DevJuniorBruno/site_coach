@@ -1,0 +1,17 @@
+.coachingExecutivo{
+    display: flex;
+    align-items: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #f6edff;
+}
+
+.coachingText{
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-indent: 1em;
+
+}

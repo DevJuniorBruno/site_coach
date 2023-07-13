@@ -12,6 +12,7 @@
     margin:20px;
     display: flex;
     justify-content: space-evenly;
+    
 }
 .footerInfo{
     width: 50%;
@@ -44,4 +45,27 @@
     align-items: center;
     justify-content: center;
     height: 60px;
+}
+
+@media(max-width:680px){
+
+    .footerContainer{
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .footerInfo{
+        width: 100%;
+        padding: 10px;
+    }
+
+    .footerInfo p{
+        padding: 20px;
+    }
+
+    .copyright{
+        font-size: 10px;
+    }
 }

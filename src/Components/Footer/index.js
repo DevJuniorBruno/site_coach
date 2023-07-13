@@ -1,9 +1,28 @@
 import './footer.css';
 import {Link}  from 'react-router-dom';
+import React, { useRef, useLayoutEffect } from 'react';
+
 
 function Footer(){
+
+    const footerRef = useRef(null);
+
+    useLayoutEffect(() => {
+        const scrollToFooter = () => {
+          if (footerRef.current) {
+            footerRef.current.scrollIntoView({ behavior: 'smooth' });
+          }
+        };
+    
+        const hash = window.location.hash;
+    
+        if (hash === '#footer') {
+          scrollToFooter();
+        }
+      }, []);
+
     return(
-        <section className='footer' >
+        <section className='footer' ref={footerRef} id="footer" >
         <div className="footerContainer" >
             <div className='footerInfo' >
                 <ul>
@@ -37,7 +56,7 @@ function Footer(){
         </section>
         
         </section>
-        
+                
     )
 }
 

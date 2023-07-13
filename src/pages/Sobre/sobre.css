@@ -1,0 +1,20 @@
+
+.containerSection{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 60%;
+}
+.divisionleft img{
+    width: 310px;
+}
+.sobreText {
+    width: 400px;
+}
+
+.sectionText{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    width: 60%;
+    margin-left: 5px;
+}
