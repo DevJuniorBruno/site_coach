@@ -50,7 +50,7 @@
 @media(max-width:680px){
 
     .footerContainer{
-        width: 100%;
+        width: 80%;
         align-items: center;
         justify-content: center;
         flex-direction: column;

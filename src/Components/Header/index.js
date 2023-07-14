@@ -54,10 +54,13 @@ function Header(){
             setIsDropdownOpen(false);
           }, 200);
       };
-    
+
+      
+
+     
     return(
-        <div className="navbar" >
-          <div className={`navlinks ${isOpen && 'open'}`} ref={navLinksRef} >
+        <div className="navbar">
+          <div className={`navlinks ${isOpen && 'open'} `}    ref={navLinksRef}>
             <Link to='/' element = { <Home/> }  >Home</Link>
             <Link to='/sobre' element={<Sobre />} >Sobre</Link>
             <Link to='/meu-proposito' element={<MeuProposito/>} >Meu Propósito</Link>
@@ -94,7 +97,7 @@ function Header(){
           </div>
 
             <div className={`nav_toggle ${isOpen && 'open'}`}
-            onClick={() =>setIsOpen(!isOpen)}
+            onClick={() =>setIsOpen(!false)}
             >
                 <div className='bar'></div>
             </div>
