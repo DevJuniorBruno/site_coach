@@ -1,108 +1,53 @@
-import './header.css'
-import { Link, useLocation } from "react-router-dom";
+import { useRef, useEffect } from "react";
+import { Link } from "react-router-dom";
+import { FaBars, FaTimes } from "react-icons/fa";
+import "./header.css";
 
 import Home from '../../pages/Home';
-import Sobre from '../../pages/Sobre';
+import Sobre from  '../../pages/Sobre';
 import MeuProposito from '../../pages/Meu-Propósito';
 import CoachingExecutivo from '../../pages/Coaching-Executivo';
+import CoachingVocacional from '../../pages/Coaching-Vocacional';
 import MentoriaCarreira from '../../pages/Mentoria-Carreira';
+import MentoriaNegocios from '../../pages/Mentoria-de-Negocios';
+import Depoimentos from "../../pages/Depoimentos";
 
-import { useState,useRef, useEffect} from "react";
+function Header() {
+	const navRef = useRef();
+	
+	const showNavbar = () => {
+		navRef.current.classList.toggle(
+			"responsive_nav"
+		);
+	};
 
-function Header(){
+	return (
+		<header>
+			<nav ref={navRef}  >
 
-    const location = useLocation()
-  
-    useEffect(()=>{
-        const handleClickOutside = (event) =>{
-            if(navLinksRef.current && !navLinksRef.current.contains(event.target)) {
-                setIsOpen(false)
-            }
-        };
+       <Link to="/" element={<Home/>} onClick={showNavbar} >Home</Link>
+       <Link to="/sobre" element={<Sobre/>} onClick={showNavbar}>Sobre</Link>
+       <Link to="/meu-proposito" element={<MeuProposito/>} onClick={showNavbar} >Meu Propósito</Link>
+       <Link to="/coaching-executivo" element={<CoachingExecutivo/>} onClick={showNavbar}>Coaching Executivo</Link>
+       <Link to="/mentoria-de-carreira" element={<MentoriaCarreira/>}onClick={showNavbar} >Mentoria Carreira</Link>
+       <Link to="/coaching-vocacional" element={<CoachingVocacional/>} onClick={showNavbar} >Coaching Executivo</Link>
+       <Link to="/mentoria-de-negocios" element={<MentoriaNegocios/>} onClick={showNavbar} >Mentoria Negócios</Link>
+       <Link to="/depoimentos" element={<Depoimentos/>} onClick={showNavbar} >Depoimentos</Link>
+       
 
-        document.addEventListener('mousedown', handleClickOutside);
-
-        return() =>{
-            document.removeEventListener('mousedown', handleClickOutside);
-        }
-
-    }, []);
-
-    useEffect(()=>{
-        setIsOpen(false)
-    }, [location]);
-
-    const [isOpen, setIsOpen]=useState(false);
-    const navLinksRef = useRef(null);
-    let timeoutId = null;
-
-    const [isDropdownOpen, setIsDropdownOpen]= useState(false);
-
-    const handleDropDownToggle = ()=>{
-        setIsDropdownOpen(!isDropdownOpen);
-    }
-
-
-    const handleMouseEnter = () => {
-        clearTimeout(timeoutId);
-        setIsDropdownOpen(true);
-      };
-    
-      const handleMouseLeave = () => {
-
-        timeoutId = setTimeout(() => {
-            setIsDropdownOpen(false);
-          }, 200);
-      };
-
-      
-
-     
-    return(
-        <div className="navbar">
-          <div className={`navlinks ${isOpen && 'open'} `}    ref={navLinksRef}>
-            <Link to='/' element = { <Home/> }  >Home</Link>
-            <Link to='/sobre' element={<Sobre />} >Sobre</Link>
-            <Link to='/meu-proposito' element={<MeuProposito/>} >Meu Propósito</Link>
-            <Link className={`dropdown ${isDropdownOpen ? "open" : ""}`}
-            onMouseEnter={handleMouseEnter}
-            onMouseLeave={handleMouseLeave}
-            
-            >
-               
-               <div className="dropdown-toggle" onClick={handleDropDownToggle} >
-                    Serviços
-               </div>
-                {isDropdownOpen &&(
-                    <div className='dropdown-menu' onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}  >
-                        <li>
-                            <Link to="/coaching-executivo" element={<CoachingExecutivo/>} >Coaching Executivo</Link>
-                        </li>
-                        <li>
-                            <Link to="/mentoria-de-carreira" element={<MentoriaCarreira/>} >Mentoria de Carreira</Link>
-                        </li>
-                        <li>
-                            <Link to="/coaching-vocacional"  >Coaching Vocacional</Link>
-                        </li>
-                        <li>
-                            <Link to="/mentoria-de-negocios" >Mentoria de Negócios</Link>
-                        </li>
-                    </div>
-                )}
-                </Link>
-            <Link to="/depoimentos" >Depoimentos</Link>
-            <Link to="/" onClick={() => (window.location.hash = 'footer')}>
-                Contato
-            </Link>
-          </div>
-
-            <div className={`nav_toggle ${isOpen && 'open'}`}
-            onClick={() =>setIsOpen(!false)}
-            >
-                <div className='bar'></div>
-            </div>
-        </div>
-    );
+				<button
+					className="nav-btn nav-close-btn"
+					onClick={showNavbar}>
+					<FaTimes />
+				</button>
+			</nav>
+			<button
+				className="nav-btn"
+				onClick={showNavbar}>
+				<FaBars />
+			</button>
+		</header>
+	);
 }
 
 export default Header;
