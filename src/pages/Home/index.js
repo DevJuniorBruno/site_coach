@@ -16,7 +16,7 @@ function Home(){
                 <div className="name_identity" >
                     <h1>Fabiana Choraes</h1>
                     <p>Coaching e mentoria</p>
-                    <Link to='/sobre' ><button className="buttonPersuasive" >
+                    <Link to="https://api.whatsapp.com/send/?phone=5511963651434" target="_blank" ><button className="buttonPersuasive" >
                         Vamos Conversar?
                     </button></Link>
                 </div>
@@ -125,9 +125,9 @@ function Home(){
                         </div>
                </section>
                <div>
-                    <button className="buttonPersuasive" >
-                    Vamos conversar?
-                    </button>
+               <Link to="https://api.whatsapp.com/send/?phone=5511963651434" target="_blank" ><button className="buttonPersuasive" >
+                        Vamos Conversar?
+                    </button></Link>
                </div>
             </section>
             <section className="depoimentSection" >
